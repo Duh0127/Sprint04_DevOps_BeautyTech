@@ -97,6 +97,8 @@ rg=rg-beautytech && location=brazilsouth && appServicePlanName=plan-beautytech &
 
 ---
 
+# ❗IMPORTANTE❗
+Todas as rotas da API são autenticadas. Entre na aba ***Authorization*** e adicione **Bearer Token**
 
 ### Conclusão
 Com esses passos, você criou uma pipeline para a API **BeautyTech** no Azure DevOps, configurando desde a importação do repositório até a execução do processo e utilização.

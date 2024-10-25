@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "3ac296b4-77a6-4030-a12c-a5b601e5b020",
+		"name": "BeautyTech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29414128"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senha\": \"senha\",\r\n    \"email\": \"rodolfo@email.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://beautytech.azurewebsites.net/clientes/login",
+							"protocol": "https",
+							"host": [
+								"beautytech",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"clientes",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://beautytech.azurewebsites.net/clientes",
+							"protocol": "https",
+							"host": [
+								"beautytech",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://beautytech.azurewebsites.net/clientes/10010",
+							"protocol": "https",
+							"host": [
+								"beautytech",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"clientes",
+								"10010"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"12345678912\",\r\n    \"nome\": \"Gabriel Oliveira\",\r\n    \"email\": \"gaboliveira@email.com\",\r\n    \"senha\": \"senhaforte\",\r\n    \"dataDeNascimento\": \"2004-09-27\",\r\n    \"estadoCivil\": \"SOLTEIRO\",\r\n    \"idGenero\": 1,\r\n    \"ddiTelefone\": \"+55\",\r\n    \"dddTelefone\": 11,\r\n    \"numeroTelefone\": \"912345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://beautytech.azurewebsites.net/clientes",
+							"protocol": "https",
+							"host": [
+								"beautytech",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"98765432103\",\r\n    \"nome\": \"Gabriel Atualizado\",\r\n    \"email\": \"gaboliveiraatualizado@email.com\",\r\n    \"senha\": \"123321\",\r\n    \"dataDeNascimento\": \"2004-09-12\",\r\n    \"estadoCivil\": \"CASADO\",\r\n    \"dataDeExclusao\": null,\r\n    \"idGenero\": 2,\r\n    \"idTelefone\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://beautytech.azurewebsites.net/clientes/10010",
+							"protocol": "https",
+							"host": [
+								"beautytech",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"clientes",
+								"10010"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://beautytech.azurewebsites.net/clientes/10010",
+							"protocol": "https",
+							"host": [
+								"beautytech",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"clientes",
+								"10010"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genero",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://beautytech.azurewebsites.net/generos",
+							"protocol": "https",
+							"host": [
+								"beautytech",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"generos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://beautytech.azurewebsites.net/generos/1",
+							"protocol": "https",
+							"host": [
+								"beautytech",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"generos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"GeneroAleatorio\",\r\n    \"descricao\": \"descricao do genero aleatorio para testar um usuario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://beautytech.azurewebsites.net/generos",
+							"protocol": "https",
+							"host": [
+								"beautytech",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"generos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Genero Alterado Pelo Postman\",\r\n    \"descricao\": \"descricao alterada pelo postman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://beautytech.azurewebsites.net/generos/103",
+							"protocol": "https",
+							"host": [
+								"beautytech",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"generos",
+								"103"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://beautytech.azurewebsites.net/generos/103",
+							"protocol": "https",
+							"host": [
+								"beautytech",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"generos",
+								"103"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
